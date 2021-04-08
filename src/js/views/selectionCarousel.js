@@ -12,7 +12,7 @@ export const SelectionCarousel = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
+		<div className="container carouselContainer">
 			<Carousel fade>
 				<Carousel.Item interval={4000}>
 					<img className="d-block carouselImg" src={PeopleImg} alt="First slide" />

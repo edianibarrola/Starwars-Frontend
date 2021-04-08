@@ -6,15 +6,15 @@ import Dropdown from "react-bootstrap/Dropdown";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-light mb-3 vw-100">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">Star Wars</span>
 			</Link>
 			<div className="ml-auto">
 				<DropdownButton id="dropdown-basic-button" title="Dropdown button ">
-					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-					<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-					<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+					<Dropdown.Item href="/selectionCarousel">Carousel</Dropdown.Item>
+					<Dropdown.Item href="/">Cards</Dropdown.Item>
+					<Dropdown.Item href="/details">Details</Dropdown.Item>
 				</DropdownButton>
 			</div>
 		</nav>

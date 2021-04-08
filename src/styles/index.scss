@@ -11,6 +11,11 @@ body,html{
     justify-content: center;
     
 }
+.container{
+    background:rgba(53, 53, 53, 0.808);
+    border-radius: 1em;
+    padding:2em;
+}
 .row.cardRow{
     // white-space: normal;
     overflow-x: scroll;
@@ -20,9 +25,16 @@ body,html{
     background:transparent;
     margin-bottom: 3em;
 }
+.row.detailsRow{
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+    border-bottom:2px solid rgb(116, 49, 49);
+}
 h1{
-    color:red;
-    margin-bottom: 3rem;
+    
+    outline: white;
+    color:rgb(173, 31, 31);
+    
 }
 .favListCount{
     padding:5px;
@@ -56,4 +68,13 @@ h1{
 .carousel-caption{
     background:rgba(0, 0, 0, 0.418);
     border-radius:1em;
+}
+.detailLists{
+    color:rgb(116, 49, 49);
+}
+.carouselContainer{
+    width:100vw;
+}
+.card{
+    height:100%;
 }

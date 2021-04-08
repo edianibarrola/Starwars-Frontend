@@ -9,7 +9,7 @@ export const Details = () => {
 	return (
 		<div className="container">
 			<h1>Details</h1>
-			<div className="row ">
+			<div className="row detailsRow">
 				<div className="col-6">
 					<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
 				</div>
