@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Details } from "../js/component/details";
+import { SelectionCarousel } from "../js/views/selectionCarousel";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -28,6 +29,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/details">
 							<Details />
+						</Route>
+						<Route exact path="/selectionCarousel">
+							<SelectionCarousel />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />

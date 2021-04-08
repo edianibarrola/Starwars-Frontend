@@ -10,8 +10,11 @@ export const Details = () => {
 		<div className="container">
 			<h1>Details</h1>
 			<div className="row ">
-				<div className="col-6" />
 				<div className="col-6">
+					<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
+				</div>
+				<div className="col-6">
+					<h3>Firsty Lastius</h3>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto consectetur, veritatis
 					fuga vel ab itaque accusantium nisi expedita perferendis sunt eligendi quae in beatae maxime
 					voluptas quod cumque obcaecati!{" "}
@@ -20,22 +23,52 @@ export const Details = () => {
 
 			<div className="row ">
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 				<div className="col-2">
-					<h3>list</h3>
+					<ul className="detailLists">
+						<h3>list</h3>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+						<li className="detailListItem">fact</li>
+					</ul>
 				</div>
 			</div>
 		</div>

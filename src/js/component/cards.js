@@ -7,7 +7,7 @@ export const Cards = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
+		<div className="">
 			<h1>People</h1>
 			<div className="row cardRow">
 				{store.people.map((item, index) => {
@@ -26,12 +26,14 @@ export const Cards = () => {
 										card content.
 									</p>
 									<div className="d-flex justify-content-between">
-										<a href="#" className="btn cardDetailsButton">
-											Go somewhere
-										</a>
+										<Link to="/details">
+											<a href="#" className="btn cardDetailsButton">
+												Learn More!
+											</a>
+										</Link>
 
 										<a href="#" className="btn likeButton ">
-											0
+											&hearts;
 										</a>
 									</div>
 								</div>
