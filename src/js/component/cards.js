@@ -31,7 +31,16 @@ export const Cards = () => {
 											</button>
 										</Link>
 
-										<button href="#" className="btn likeButton ">
+										<button
+											href="#"
+											className="btn likeButton "
+											onClick={() =>
+												actions.addFavorite({
+													name: item.name,
+													url: item.url,
+													uid: item.uid
+												})
+											}>
 											&hearts;
 										</button>
 									</div>
@@ -58,7 +67,16 @@ export const Cards = () => {
 											</button>
 										</Link>
 
-										<button href="#" className="btn likeButton ">
+										<button
+											href="#"
+											className="btn likeButton "
+											onClick={() =>
+												actions.addFavorite({
+													name: item.name,
+													url: item.url,
+													uid: item.uid
+												})
+											}>
 											&hearts;
 										</button>
 									</div>
@@ -85,7 +103,16 @@ export const Cards = () => {
 											</button>
 										</Link>
 
-										<button href="#" className="btn likeButton ">
+										<button
+											href="#"
+											className="btn likeButton "
+											onClick={() =>
+												actions.addFavorite({
+													name: item.name,
+													url: item.url,
+													uid: item.uid
+												})
+											}>
 											&hearts;
 										</button>
 									</div>

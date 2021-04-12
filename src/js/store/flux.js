@@ -172,7 +172,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// 	url: "https://www.swapi.tech/api/starships/17"
 				// }
 			],
-			favoriteList: []
+			favorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -233,10 +233,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			addFavorite: data => {
+				//gain access to the store by creating a local version of it
+				const store = getStore();
+				//push new data to local version of the store
+				store.favorites.push(data);
+				//reset the global store to include newly added values in local store
+				setStore(store);
 			}
-			// addToFavorites: (name, uid) => {
-			//     setStore({})
-			// }
 		}
 	};
 };

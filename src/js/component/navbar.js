@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import { LogoPng } from "../../img/star-wars-logo-1.png";
+import Badge from "react-bootstrap/Badge";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -17,8 +18,15 @@ export const Navbar = () => {
 					/>
 				</span>
 			</Link>
+
 			<div className="ml-auto">
-				<DropdownButton id="dropdown-basic-button" title="Dropdown button ">
+				<DropdownButton
+					id="dropdown-basic-button"
+					title={
+						<span>
+							Favorites <Badge variant="light">9</Badge>
+						</span>
+					}>
 					<Dropdown.Item href="/selectionCarousel">Carousel</Dropdown.Item>
 					<Dropdown.Item href="/">Cards</Dropdown.Item>
 					<Dropdown.Item href="/details">Details</Dropdown.Item>
