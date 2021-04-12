@@ -24,7 +24,7 @@ export const Navbar = () => {
 					id="dropdown-basic-button"
 					title={
 						<span>
-							Favorites <Badge variant="light">9</Badge>
+							Favorites <Badge variant="light">{store.favorites.length}</Badge>
 						</span>
 					}>
 					<Dropdown.Item href="/selectionCarousel">Carousel</Dropdown.Item>

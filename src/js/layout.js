@@ -40,13 +40,13 @@ const Layout = () => {
 							<Single />
 						</Route>
 
-						<Route exact path="/person/:id">
+						<Route exact path="/details/person/:id">
 							<Details />
 						</Route>
-						<Route exact path="/planet/:id">
+						<Route exact path="/details/planet/:id">
 							<Details />
 						</Route>
-						<Route exact path="/vehicle/:id">
+						<Route exact path="/details/vehicle/:id">
 							<Details />
 						</Route>
 

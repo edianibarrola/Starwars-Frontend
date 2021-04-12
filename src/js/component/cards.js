@@ -25,7 +25,7 @@ export const Cards = () => {
 									<h6 className="card-title">{item.name}</h6>
 
 									<div className="d-flex justify-content-between">
-										<Link to="/details">
+										<Link to={"/details/person/" + item.uid}>
 											<button href="#" className="btn cardDetailsButton">
 												Learn More!
 											</button>
@@ -61,7 +61,7 @@ export const Cards = () => {
 									<h6 className="card-title">{item.name}</h6>
 
 									<div className="d-flex justify-content-between">
-										<Link to="/details">
+										<Link to={"/details/planet/" + item.uid}>
 											<button href="#" className="btn cardDetailsButton">
 												Learn More!
 											</button>
@@ -97,7 +97,7 @@ export const Cards = () => {
 									<h6 className="card-title ">{item.name}</h6>
 
 									<div className="d-flex justify-content-between ">
-										<Link to="/details">
+										<Link to={"/details/vehicle/" + item.uid}>
 											<button href="#" className="btn cardDetailsButton">
 												Learn More!
 											</button>
