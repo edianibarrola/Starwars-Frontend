@@ -26,14 +26,14 @@ export const Cards = () => {
 
 									<div className="d-flex justify-content-between">
 										<Link to="/details">
-											<a href="#" className="btn cardDetailsButton">
+											<button href="#" className="btn cardDetailsButton">
 												Learn More!
-											</a>
+											</button>
 										</Link>
 
-										<a href="#" className="btn likeButton ">
+										<button href="#" className="btn likeButton ">
 											&hearts;
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -53,14 +53,14 @@ export const Cards = () => {
 
 									<div className="d-flex justify-content-between">
 										<Link to="/details">
-											<a href="#" className="btn cardDetailsButton">
+											<button href="#" className="btn cardDetailsButton">
 												Learn More!
-											</a>
+											</button>
 										</Link>
 
-										<a href="#" className="btn likeButton ">
+										<button href="#" className="btn likeButton ">
 											&hearts;
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -80,14 +80,14 @@ export const Cards = () => {
 
 									<div className="d-flex justify-content-between ">
 										<Link to="/details">
-											<a href="#" className="btn cardDetailsButton">
+											<button href="#" className="btn cardDetailsButton">
 												Learn More!
-											</a>
+											</button>
 										</Link>
 
-										<a href="#" className="btn likeButton ">
+										<button href="#" className="btn likeButton ">
 											&hearts;
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>

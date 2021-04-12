@@ -14,6 +14,7 @@ body,html{
 }
 .container{
     background:rgba(53, 53, 53, 0.808);
+    
     border-radius: 1em;
     padding:2em;
      -moz-box-shadow:    inset 0 0 10px #000000;
@@ -105,11 +106,13 @@ h1{
 }
 
 .detailsBox{
-    
+    background-color: #2f4353;
+background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+
      -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
    box-shadow:         inset 0 0 10px #000000;
-    background: grey;
+    //background: grey;
     border-radius: 1em;
     padding:2em;
 }
