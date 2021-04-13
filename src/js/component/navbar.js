@@ -27,8 +27,8 @@ export const Navbar = () => {
 							Favorites <Badge variant="light">{store.favorites.length}</Badge>
 						</span>
 					}>
-					<Dropdown.Item href="/selectionCarousel">Carousel</Dropdown.Item>
-					<Dropdown.Item href="/">Cards</Dropdown.Item>
+					<Dropdown.Item href="/">Carousel</Dropdown.Item>
+					<Dropdown.Item href="/cardsview">Cards</Dropdown.Item>
 					<Dropdown.Item href="/details">Details</Dropdown.Item>
 				</DropdownButton>
 			</div>

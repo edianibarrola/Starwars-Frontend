@@ -172,7 +172,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// 	url: "https://www.swapi.tech/api/starships/17"
 				// }
 			],
-			favorites: []
+			favorites: [],
+			details: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -241,6 +242,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				store.favorites.push(data);
 				//reset the global store to include newly added values in local store
 				setStore(store);
+			},
+			fetchDetails: url => {
+				console.log("url in function: " + url);
+
+				fetch(url) //people list fetch
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => {
+						setStore({ details: data.result });
+					})
+					.catch(error => {
+						console.log("Error fetching details: \n", error);
+					});
 			}
 		}
 	};

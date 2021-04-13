@@ -2,10 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/home.scss";
+import PropTypes from "prop-types";
 
 export const Details = () => {
 	const { store, actions } = useContext(Context);
-
+	console.log("store details: " + store.details);
 	return (
 		<div className="container ">
 			<div className="detailsBox">
@@ -75,4 +76,7 @@ export const Details = () => {
 			</div>
 		</div>
 	);
+};
+Details.propTypes = {
+	propUrl: PropTypes.string
 };

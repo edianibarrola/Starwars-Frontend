@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
+import { CardsView } from "./views/cardsView";
 import { Details } from "../js/component/details";
 import { SelectionCarousel } from "../js/views/selectionCarousel";
-import { Demo } from "./views/demo";
+
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -25,21 +25,14 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<SelectionCarousel />
+						</Route>
+						<Route exact path="/cardsview">
+							<CardsView />
 						</Route>
 						<Route exact path="/details">
 							<Details />
 						</Route>
-						<Route exact path="/selectionCarousel">
-							<SelectionCarousel />
-						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
-
 						<Route exact path="/details/person/:id">
 							<Details />
 						</Route>

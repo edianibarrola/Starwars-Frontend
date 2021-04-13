@@ -22,11 +22,17 @@ export const Cards = () => {
 							<div className="card" style={{ width: "15rem" }}>
 								<img className="card-img-top" src={peopleImgLink} alt="Card image cap" />
 								<div className="card-body">
-									<h6 className="card-title">{item.name}</h6>
+									<h6 className="card-title">
+										{item.name}
+										{item.url}
+									</h6>
 
 									<div className="d-flex justify-content-between">
 										<Link to={"/details/person/" + item.uid}>
-											<button href="#" className="btn cardDetailsButton">
+											<button
+												href="#"
+												className="btn cardDetailsButton"
+												onClick={() => actions.fetchDetails(item.url)}>
 												Learn More!
 											</button>
 										</Link>
@@ -61,7 +67,7 @@ export const Cards = () => {
 									<h6 className="card-title">{item.name}</h6>
 
 									<div className="d-flex justify-content-between">
-										<Link to={"/details/planet/" + item.uid}>
+										<Link to={"/details/planet/" + item.uid} props={item.url}>
 											<button href="#" className="btn cardDetailsButton">
 												Learn More!
 											</button>

@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import { Cards } from "../component/cards";
 
-export const Home = () => {
+export const CardsView = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
