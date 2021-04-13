@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 export const Details = () => {
 	const { store, actions } = useContext(Context);
 	console.log("store details: " + store.details);
+	console.log("store details.name: " + store.details);
 	return (
 		<div className="container ">
 			<div className="detailsBox">
@@ -16,7 +17,7 @@ export const Details = () => {
 						<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
 					</div>
 					<div className="col-6">
-						<h3>Firsty Lastius</h3>
+						<h3>{store.details.name}</h3>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto consectetur, veritatis
 						fuga vel ab itaque accusantium nisi expedita perferendis sunt eligendi quae in beatae maxime
 						voluptas quod cumque obcaecati!{" "}
