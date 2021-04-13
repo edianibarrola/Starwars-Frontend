@@ -8,7 +8,7 @@ import Badge from "react-bootstrap/Badge";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light  mb-3 vw-100">
+		<nav className="navbar sticky-top navbar-light  mb-3 vw-100">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">
 					<img
@@ -27,9 +27,15 @@ export const Navbar = () => {
 							Favorites <Badge variant="light">{store.favorites.length}</Badge>
 						</span>
 					}>
-					<Dropdown.Item href="/">Carousel</Dropdown.Item>
-					<Dropdown.Item href="/cardsview">Cards</Dropdown.Item>
-					<Dropdown.Item href="/details">Details</Dropdown.Item>
+					{store.favorites.length > 0 ? (
+						store.favorites.map((item, index) => (
+							<Dropdown.Item key={index} href="/">
+								{item.name}
+							</Dropdown.Item>
+						))
+					) : (
+						<Dropdown.Item href="/">Add some Favorites!</Dropdown.Item>
+					)}
 				</DropdownButton>
 			</div>
 		</nav>

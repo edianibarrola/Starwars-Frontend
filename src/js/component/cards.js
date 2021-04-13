@@ -22,10 +22,7 @@ export const Cards = () => {
 							<div className="card" style={{ width: "15rem" }}>
 								<img className="card-img-top" src={peopleImgLink} alt="Card image cap" />
 								<div className="card-body">
-									<h6 className="card-title">
-										{item.name}
-										{item.url}
-									</h6>
+									<h6 className="card-title">{item.name}</h6>
 
 									<div className="d-flex justify-content-between">
 										<Link to={"/details/person/" + item.uid}>
