@@ -19,7 +19,7 @@ export const Cards = () => {
 				{store.people.map((item, index) => {
 					return (
 						<div className="col" key={index}>
-							<div className="card">
+							<div className="card" style={{ width: "20rem" }}>
 								<img className="card-img-top" src={peopleImgLink} alt="Card image cap" />
 								<div className="card-body">
 									<h6 className="card-title">{item.name}</h6>
@@ -58,7 +58,7 @@ export const Cards = () => {
 				{store.planets.map((item, index) => {
 					return (
 						<div className="col" key={index}>
-							<div className="card" style={{ width: "15rem" }}>
+							<div className="card" style={{ width: "20rem" }}>
 								<img className="card-img-top" src={planetImgLink} alt="Card image cap" />
 								<div className="card-body">
 									<h6 className="card-title">{item.name}</h6>
@@ -94,7 +94,7 @@ export const Cards = () => {
 				{store.starships.map((item, index) => {
 					return (
 						<div className="col" key={index}>
-							<div className="card" style={{ width: "15rem" }}>
+							<div className="card" style={{ width: "20rem" }}>
 								<img className="card-img-top" src={vehicleImgLink} alt="Card image cap" />
 								<div className="card-body">
 									<h6 className="card-title ">{item.name}</h6>
