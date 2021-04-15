@@ -254,7 +254,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						setStore({ details: data.result });
+						setStore({ details: data.result.properties });
 					})
 					.catch(error => {
 						console.log("Error fetching details: \n", error);

@@ -6,68 +6,71 @@ import PropTypes from "prop-types";
 
 export const Details = () => {
 	const { store, actions } = useContext(Context);
-	console.log("store details: " + store.details);
-	console.log("store details.name: " + store.details);
+
+	let detName = store.details.name;
+
+	console.log("store details.name: " + store.details.name);
 	return (
 		<div className="container ">
 			<div className="detailsBox">
 				<h1>Details</h1>
 				<div className="row detailsRow">
-					<div className="col-6">
+					<div className="col-sm-12 col-md-6">
 						<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
 					</div>
-					<div className="col-6">
-						<h3>{store.details.name}</h3>
+					<div className="col-sm-12 col-md-6 text-center">
+						{/* <h3>{detName}</h3> */}
+						<h3 className="detailsH3">{detName != undefined ? detName : "name undefined"}</h3>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto consectetur, veritatis
 						fuga vel ab itaque accusantium nisi expedita perferendis sunt eligendi quae in beatae maxime
 						voluptas quod cumque obcaecati!{" "}
 					</div>
 				</div>
 
-				<div className="row ">
-					<div className="col-2">
-						<ul className="detailLists">
-							<h3>list</h3>
+				<div className="row  ">
+					<div className="col-md-2 col-sm-12  mx-auto">
+						<ul className="detailLists ">
+							<h3>Height</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 						</ul>
 					</div>
-					<div className="col-2">
+					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>list</h3>
+							<h3>Mass</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 						</ul>
 					</div>
-					<div className="col-2">
+					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>list</h3>
+							<h3>Hair Color</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 						</ul>
 					</div>
-					<div className="col-2">
+					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>list</h3>
+							<h3>Skin Color</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 						</ul>
 					</div>
-					<div className="col-2">
+					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>list</h3>
+							<h3>Eye Color</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 						</ul>
 					</div>
-					<div className="col-2">
+					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>list</h3>
+							<h3>Gender</h3>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>
 							<li className="detailListItem">fact</li>

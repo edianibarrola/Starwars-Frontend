@@ -58,6 +58,8 @@ h1{
 
 }
 .detailListItem{
+   
+    text-align: center;
     list-style: none;
 }
 .detailsImg{
@@ -74,8 +76,30 @@ h1{
     background:rgba(0, 0, 0, 0.418);
     border-radius:1em;
 }
+.detailsH3{
+    font-size:150%;
+}
+ul{
+    padding-left: 0;
+    padding-right: 0;
+}
+ul.detailLists{
+    
+
+    align-items: center;
+    justify-content: center;
+    
+    margin:0px 0px 0px 0px;
+}
 .detailLists{
     color:rgb(116, 49, 49);
+    
+}
+.detailLists>h3{
+    font-size: 150%;
+    text-shadow: 2px 2px 2px rgb(107, 107, 107);
+    text-align: center;
+    
 }
 .carouselContainer{
     width:100vw;

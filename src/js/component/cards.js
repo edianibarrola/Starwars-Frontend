@@ -19,7 +19,7 @@ export const Cards = () => {
 				{store.people.map((item, index) => {
 					return (
 						<div className="col" key={index}>
-							<div className="card" style={{ width: "15rem" }}>
+							<div className="card">
 								<img className="card-img-top" src={peopleImgLink} alt="Card image cap" />
 								<div className="card-body">
 									<h6 className="card-title">{item.name}</h6>
