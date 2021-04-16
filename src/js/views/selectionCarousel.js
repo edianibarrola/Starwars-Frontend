@@ -16,7 +16,7 @@ export const SelectionCarousel = () => {
 			<div className="detailsBox">
 				<Carousel fade>
 					<Carousel.Item interval={4000}>
-						<img className="d-block carouselImg" src={PeopleImg} alt="First slide" />
+						<img className="d-block carouselImg " src={PeopleImg} alt="First slide" />
 						<Link to="/cardsview">
 							<Carousel.Caption>
 								<h3>People</h3>

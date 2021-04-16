@@ -18,35 +18,42 @@ export const Cards = () => {
 			<div className="row cardRow">
 				{store.people.map((item, index) => {
 					return (
-						<div className="col" key={index}>
-							<div className="card" style={{ width: "20rem" }}>
+						<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={index}>
+							<div className="card">
 								<img className="card-img-top" src={peopleImgLink} alt="Card image cap" />
 								<div className="card-body">
 									<h6 className="card-title">{item.name}</h6>
-
-									<div className="d-flex justify-content-between">
-										<Link to={"/details/person/" + item.uid}>
+									<div className="row">
+										<div className="col-md-8 col-sm-12">
+											<Link to={"/details/person/" + item.uid}>
+												<button
+													href="#"
+													className="btn cardDetailsButton"
+													onClick={() => actions.fetchDetails(item.url)}>
+													Learn More!
+												</button>
+											</Link>
+										</div>
+										<div className="col-md-4 col-sm-12">
 											<button
 												href="#"
-												className="btn cardDetailsButton"
-												onClick={() => actions.fetchDetails(item.url)}>
-												Learn More!
+												className="btn likeButton "
+												onClick={() =>
+													actions.addFavorite({
+														name: item.name,
+														url: item.url,
+														uid: item.uid
+													})
+												}>
+												&hearts;
 											</button>
-										</Link>
-
-										<button
-											href="#"
-											className="btn likeButton "
-											onClick={() =>
-												actions.addFavorite({
-													name: item.name,
-													url: item.url,
-													uid: item.uid
-												})
-											}>
-											&hearts;
-										</button>
+										</div>
 									</div>
+									{/* <div className="d-flex justify-content-between">
+										
+
+										
+									</div> */}
 								</div>
 							</div>
 						</div>

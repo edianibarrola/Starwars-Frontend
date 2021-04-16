@@ -8,6 +8,12 @@ export const Details = () => {
 	const { store, actions } = useContext(Context);
 
 	let detName = store.details.name;
+	let detMass = store.details.mass;
+	let detHeight = store.details.height;
+	let detHair = store.details.hair_color;
+	let detSkin = store.details.skin_color;
+	let detEye = store.details.eye_color;
+	let detGender = store.details.gender;
 
 	console.log("store details.name: " + store.details.name);
 	return (
@@ -18,7 +24,7 @@ export const Details = () => {
 					<div className="col-sm-12 col-md-6">
 						<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
 					</div>
-					<div className="col-sm-12 col-md-6 text-center">
+					<div className="col-sm-12 col-md-6 text-center align-self-center">
 						{/* <h3>{detName}</h3> */}
 						<h3 className="detailsH3">{detName != undefined ? detName : "name undefined"}</h3>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto consectetur, veritatis
@@ -31,49 +37,37 @@ export const Details = () => {
 					<div className="col-md-2 col-sm-12  mx-auto">
 						<ul className="detailLists ">
 							<h3>Height</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detHeight != undefined ? detHeight : "Mass undefined"}</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
 							<h3>Mass</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detMass != undefined ? detMass : "Mass undefined"}</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
 							<h3>Hair Color</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detHair != undefined ? detHair : "Mass undefined"}</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
 							<h3>Skin Color</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detSkin != undefined ? detSkin : "Mass undefined"}</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
 							<h3>Eye Color</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detEye != undefined ? detEye : "Mass undefined"}</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
 							<h3>Gender</h3>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
-							<li className="detailListItem">fact</li>
+							<li className="detailListItem">{detGender != undefined ? detGender : "Mass undefined"}</li>
 						</ul>
 					</div>
 				</div>
