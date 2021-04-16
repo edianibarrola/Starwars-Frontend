@@ -4,23 +4,23 @@ import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import PropTypes from "prop-types";
 
-export const Details = () => {
+export const PlanetDetails = () => {
 	const { store, actions } = useContext(Context);
 
+	let detClimate = store.details.climate;
+	let detGravity = store.details.gravity;
+	let detPopulation = store.details.population;
+	let detTerrain = store.details.terrain;
+	let detRotationPeriod = store.details.rotation_period;
+	let detOrbitalPeriod = store.details.orbital_period;
 	let detName = store.details.name;
-	let detMass = store.details.mass;
-	let detHeight = store.details.height;
-	let detHair = store.details.hair_color;
-	let detSkin = store.details.skin_color;
-	let detEye = store.details.eye_color;
-	let detGender = store.details.gender;
 
 	console.log("store details.name: " + store.details.name);
 	return (
 		<div className="container ">
 			<div className="detailsBox">
 				<h1>Details</h1>
-				<div className="row detailsRow ">
+				<div className="row detailsRow">
 					<div className="col-sm-12 col-md-6">
 						<img src="http://via.placeholder.com/800x600" alt="" className="detailsImg" />
 					</div>
@@ -36,38 +36,50 @@ export const Details = () => {
 				<div className="row  ">
 					<div className="col-md-2 col-sm-12  mx-auto">
 						<ul className="detailLists ">
-							<h3>Height</h3>
-							<li className="detailListItem">{detHeight != undefined ? detHeight : "Mass undefined"}</li>
+							<h3>Climate</h3>
+							<li className="detailListItem">
+								{detClimate != undefined ? detClimate : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>Mass</h3>
-							<li className="detailListItem">{detMass != undefined ? detMass : "Mass undefined"}</li>
+							<h3>Gravity</h3>
+							<li className="detailListItem">
+								{detGravity != undefined ? detGravity : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>Hair Color</h3>
-							<li className="detailListItem">{detHair != undefined ? detHair : "Mass undefined"}</li>
+							<h3>Population</h3>
+							<li className="detailListItem">
+								{detPopulation != undefined ? detPopulation : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>Skin Color</h3>
-							<li className="detailListItem">{detSkin != undefined ? detSkin : "Mass undefined"}</li>
+							<h3>Terrain</h3>
+							<li className="detailListItem">
+								{detTerrain != undefined ? detTerrain : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>Eye Color</h3>
-							<li className="detailListItem">{detEye != undefined ? detEye : "Mass undefined"}</li>
+							<h3>Rotation Period</h3>
+							<li className="detailListItem">
+								{detRotationPeriod != undefined ? detRotationPeriod : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 					<div className="col-md-2 col-sm-12">
 						<ul className="detailLists">
-							<h3>Gender</h3>
-							<li className="detailListItem">{detGender != undefined ? detGender : "Mass undefined"}</li>
+							<h3>Orbital Period</h3>
+							<li className="detailListItem">
+								{detOrbitalPeriod != undefined ? detOrbitalPeriod : "Mass undefined"}
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -75,6 +87,6 @@ export const Details = () => {
 		</div>
 	);
 };
-Details.propTypes = {
+PlanetDetails.propTypes = {
 	propUrl: PropTypes.string
 };

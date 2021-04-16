@@ -4,7 +4,8 @@ import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import Carousel from "react-bootstrap/Carousel";
 
-import PeopleImg from "../../img/people.jpg";
+//import PeopleImg from "../../img/people.jpg";
+import PeopleImg from "../../img/people2.jpg";
 import PlanetImg from "../../img/planets.jpg";
 import VehiclesImg from "../../img/vehicles.jpg";
 

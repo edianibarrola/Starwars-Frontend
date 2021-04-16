@@ -26,7 +26,10 @@ export const PlanetCards = () => {
 									<div className="row">
 										<div className="col-md-6 col-sm-12 col-xs-12">
 											<Link to={"/details/planet/" + item.uid} props={item.url}>
-												<button href="#" className="btn cardDetailsButton">
+												<button
+													href="#"
+													className="btn cardDetailsButton"
+													onClick={() => actions.fetchDetails(item.url)}>
 													Learn More!
 												</button>
 											</Link>

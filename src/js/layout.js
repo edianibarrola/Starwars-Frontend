@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { CardsView } from "./views/cardsView";
 import { Details } from "../js/component/details";
+import { PlanetDetails } from "../js/component/planetDetails";
 import { SelectionCarousel } from "../js/views/selectionCarousel";
 
 import { Single } from "./views/single";
@@ -37,7 +38,7 @@ const Layout = () => {
 							<Details />
 						</Route>
 						<Route exact path="/details/planet/:id">
-							<Details />
+							<PlanetDetails />
 						</Route>
 						<Route exact path="/details/vehicle/:id">
 							<Details />

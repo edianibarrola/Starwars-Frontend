@@ -12,9 +12,9 @@ export const CardsView = () => {
 	return (
 		<div className="container">
 			<div>
-				<VehicleCards />
-				<PlanetCards />
 				<PeopleCards />
+				<PlanetCards />
+				<VehicleCards />
 			</div>
 		</div>
 	);
