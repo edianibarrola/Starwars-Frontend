@@ -4,7 +4,8 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { CardsView } from "./views/cardsView";
 import { Details } from "../js/component/details";
-import { PlanetDetails } from "../js/component/planetDetails";
+import { PlanetDetails } from "./component/planetDetails";
+import { VehicleDetails } from "./component/vehicleDetails";
 import { SelectionCarousel } from "../js/views/selectionCarousel";
 
 import { Single } from "./views/single";
@@ -41,7 +42,7 @@ const Layout = () => {
 							<PlanetDetails />
 						</Route>
 						<Route exact path="/details/vehicle/:id">
-							<Details />
+							<VehicleDetails />
 						</Route>
 
 						<Route>

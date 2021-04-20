@@ -25,8 +25,11 @@ export const VehicleCards = () => {
 									<h6 className="card-title ">{item.name}</h6>
 
 									<div className="d-flex justify-content-between ">
-										<Link to={"/details/vehicle/" + item.uid}>
-											<button href="#" className="btn cardDetailsButton">
+										<Link to={"/details/vehicle/" + item.uid} props={item.url}>
+											<button
+												href="#"
+												className="btn cardDetailsButton"
+												onClick={() => actions.fetchDetails(item.url)}>
 												Learn More!
 											</button>
 										</Link>
