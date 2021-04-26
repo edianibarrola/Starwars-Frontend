@@ -1,3 +1,4 @@
+const myUrl = "https://3000-harlequin-chipmunk-e49ijhxj.ws-us03.gitpod.io";
 const peopleUrl = "https://www.swapi.tech/api/people";
 const planetsUrl = "https://www.swapi.tech/api/planets";
 const vehiclesUrl = "https://www.swapi.tech/api/vehicles";
@@ -16,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+			userList: [],
 			people: [
 				// {
 				// 	uid: "1",
@@ -219,6 +221,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => {
 						console.log("Error fetching planet list: \n", error);
+					});
+				fetch(`${myUrl}/user`) //User list fetch
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => {
+						setStore({ userList: data });
+					})
+					.catch(error => {
+						console.log("Error fetching user list: \n", error);
 					});
 			},
 			changeColor: (index, color) => {
