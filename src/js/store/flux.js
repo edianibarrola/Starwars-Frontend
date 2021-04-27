@@ -107,9 +107,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore(store);
 			},
 			fetchDetails: url => {
-				console.log("url in function: " + url);
+				console.log("url in function: " + myUrl + url);
 
-				fetch(url) //people list fetch
+				fetch(myUrl + url) //people list fetch
 					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -117,7 +117,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						setStore({ details: data.result.properties });
+						setStore({ details: data });
 					})
 					.catch(error => {
 						console.log("Error fetching details: \n", error);

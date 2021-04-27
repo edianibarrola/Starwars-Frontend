@@ -29,7 +29,7 @@ export const PeopleCards = () => {
 												<button
 													href="#"
 													className="btn cardDetailsButton"
-													onClick={() => actions.fetchDetails(item.url)}>
+													onClick={() => actions.fetchDetails("/person/" + item.id)}>
 													Learn More!
 												</button>
 											</Link>
