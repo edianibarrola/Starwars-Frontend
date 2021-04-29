@@ -1,4 +1,4 @@
-const myUrl = "https://3000-harlequin-chipmunk-e49ijhxj.ws-us03.gitpod.io";
+const myUrl = "https://3000-harlequin-chipmunk-e49ijhxj.ws-us04.gitpod.io";
 const peopleUrl = "https://www.swapi.tech/api/people";
 const planetsUrl = "https://www.swapi.tech/api/planets";
 const vehiclesUrl = "https://www.swapi.tech/api/vehicles";
@@ -44,7 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.log("Error fetching people list: \n", error);
 					});
-				fetch(planetsUrl) //planets list fetch
+				fetch(`${myUrl}/planet`) //planets list fetch
 					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -52,12 +52,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						setStore({ planets: data.results });
+						setStore({ planets: data });
 					})
 					.catch(error => {
 						console.log("Error fetching planet list: \n", error);
 					});
-				fetch(vehiclesUrl) //starships list fetch
+				fetch(`${myUrl}/vehicle`) //starships list fetch
 					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -65,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						setStore({ starships: data.results });
+						setStore({ starships: data });
 					})
 					.catch(error => {
 						console.log("Error fetching planet list: \n", error);
