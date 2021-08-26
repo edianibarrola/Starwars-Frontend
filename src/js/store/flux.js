@@ -1,4 +1,4 @@
-const myUrl = "https://3000-harlequin-chipmunk-e49ijhxj.ws-us04.gitpod.io";
+const myUrl = "https://3000-yellow-owl-i0vwp0l6.ws-us15.gitpod.io";
 const peopleUrl = "https://www.swapi.tech/api/people";
 const planetsUrl = "https://www.swapi.tech/api/planets";
 const vehiclesUrl = "https://www.swapi.tech/api/vehicles";
@@ -57,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.log("Error fetching planet list: \n", error);
 					});
-				fetch(`${myUrl}/vehicle`) //starships list fetch
+				fetch(`${myUrl}/starship`) //starships list fetch
 					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
