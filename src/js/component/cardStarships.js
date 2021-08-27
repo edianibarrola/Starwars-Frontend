@@ -9,45 +9,43 @@ const planetImgLink =
 const vehicleImgLink =
 	"https://www.denofgeek.com/wp-content/uploads/2015/12/big_thumb_cd04cc40bd2e7060c7a2b417b1743b74.jpg?fit=620%2C349";
 const placeHolderImg = "https://via.placeholder.com/286x180?text=Edian+was+here";
-export const PlanetCards = () => {
+export const StarshipCards = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="detailsBox">
-			<h1>Planets</h1>
+			<h1>Starships</h1>
 			<div className="row cardRow">
-				{store.planets.map((item, index) => {
+				{store.starships.map((item, index) => {
 					return (
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" key={index}>
 							<div className="card">
-								<img className="card-img-top" src={planetImgLink} alt="Card image cap" />
+								<img className="card-img-top" src={vehicleImgLink} alt="Card image cap" />
 								<div className="card-body">
-									<h6 className="card-title">{item.name}</h6>
-									<div className="row">
-										<div className="col-md-6 col-sm-12 col-xs-12">
-											<Link to={"/details/planet/" + item.id} props={item.url}>
-												<button
-													href="#"
-													className="btn cardDetailsButton"
-													onClick={() => actions.fetchDetails("/planet/" + item.id)}>
-													Learn More!
-												</button>
-											</Link>
-										</div>
-										<div className="col-md-6 col-sm-12">
+									<h6 className="card-title ">{item.name}</h6>
+
+									<div className="d-flex justify-content-between ">
+										<Link to={"/details/starship/" + item.id} props={item.url}>
 											<button
 												href="#"
-												className="btn likeButton "
-												onClick={() =>
-													actions.addFavorite({
-														name: item.name,
-														url: item.url,
-														uid: item.uid
-													})
-												}>
-												&hearts;
+												className="btn cardDetailsButton"
+												onClick={() => actions.fetchDetails("/starship/" + item.id)}>
+												Learn More!
 											</button>
-										</div>
+										</Link>
+
+										<button
+											href="#"
+											className="btn likeButton "
+											onClick={() =>
+												actions.addFavorite({
+													name: item.name,
+													url: item.url,
+													uid: item.uid
+												})
+											}>
+											&hearts;
+										</button>
 									</div>
 								</div>
 							</div>

@@ -25,7 +25,7 @@ export const PeopleCards = () => {
 									<h6 className="card-title">{item.name}</h6>
 									<div className=" d-flex justify-content-between align-items-center ">
 										<div className="col-md-6 col-sm-12 col-xs-12">
-											<Link to={"/details/person/" + item.uid}>
+											<Link to={"/details/person/" + item.id}>
 												<button
 													href="#"
 													className="btn cardDetailsButton"
@@ -41,8 +41,8 @@ export const PeopleCards = () => {
 												onClick={() =>
 													actions.addFavorite({
 														name: item.name,
-														url: item.url,
-														uid: item.uid
+														url: "/person/" + item.id,
+														id: item.id
 													})
 												}>
 												&hearts;

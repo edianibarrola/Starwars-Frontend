@@ -1,4 +1,4 @@
-const myUrl = "https://3000-yellow-owl-i0vwp0l6.ws-us15.gitpod.io";
+const myUrl = "https://3000-yellow-owl-i0vwp0l6.ws-us16.gitpod.io";
 const peopleUrl = "https://www.swapi.tech/api/people";
 const planetsUrl = "https://www.swapi.tech/api/planets";
 const vehiclesUrl = "https://www.swapi.tech/api/vehicles";
@@ -21,6 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			people: [],
 			planets: [],
 			starships: [],
+			vehicles: [],
 			favorites: [],
 			details: []
 		},
@@ -68,7 +69,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ starships: data });
 					})
 					.catch(error => {
-						console.log("Error fetching planet list: \n", error);
+						console.log("Error fetching starship list: \n", error);
+					});
+				fetch(`${myUrl}/vehicle`) //starships list fetch
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => {
+						setStore({ vehicles: data });
+					})
+					.catch(error => {
+						console.log("Error fetching vehicle list: \n", error);
 					});
 				fetch(`${myUrl}/user`) //User list fetch
 					.then(response => {

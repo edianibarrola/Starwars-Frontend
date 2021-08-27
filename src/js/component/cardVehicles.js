@@ -14,9 +14,9 @@ export const VehicleCards = () => {
 
 	return (
 		<div className="detailsBox">
-			<h1>Starships</h1>
+			<h1>Vehicles</h1>
 			<div className="row cardRow">
-				{store.starships.map((item, index) => {
+				{store.vehicles.map((item, index) => {
 					return (
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" key={index}>
 							<div className="card">
@@ -25,11 +25,11 @@ export const VehicleCards = () => {
 									<h6 className="card-title ">{item.name}</h6>
 
 									<div className="d-flex justify-content-between ">
-										<Link to={"/details/vehicle/" + item.uid} props={item.url}>
+										<Link to={"/details/vehicle/" + item.id} props={item.url}>
 											<button
 												href="#"
 												className="btn cardDetailsButton"
-												onClick={() => actions.fetchDetails(item.url)}>
+												onClick={() => actions.fetchDetails("/vehicle/" + item.id)}>
 												Learn More!
 											</button>
 										</Link>

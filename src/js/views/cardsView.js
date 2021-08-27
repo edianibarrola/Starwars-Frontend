@@ -5,6 +5,7 @@ import "../../styles/home.scss";
 import { PeopleCards } from "../component/cardPeople";
 import { PlanetCards } from "../component/cardPlanets";
 import { VehicleCards } from "../component/cardVehicles";
+import { StarshipCards } from "../component/cardStarships";
 
 export const CardsView = () => {
 	const { store, actions } = useContext(Context);
@@ -15,6 +16,7 @@ export const CardsView = () => {
 				<PeopleCards />
 				<PlanetCards />
 				<VehicleCards />
+				<StarshipCards />
 			</div>
 		</div>
 	);
